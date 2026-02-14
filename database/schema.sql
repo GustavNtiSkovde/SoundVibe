@@ -1,4 +1,4 @@
--- SQL Schema for SoundVibe Database
+USE soundvibe;
 
 CREATE TABLE users (
     ID INT AUTO_INCREMENT PRIMARY KEY,
