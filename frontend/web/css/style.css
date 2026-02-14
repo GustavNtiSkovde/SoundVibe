@@ -1,0 +1,7 @@
+body {
+    background-color: rgb(28, 255, 12);
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
