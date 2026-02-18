@@ -63,3 +63,74 @@ footer {
     grid-column: 1 / span 3; 
     grid-row: 3; 
 }
+
+.slideContainer {
+    width: 120px;
+    display: flex;
+    align-items: center;
+}
+
+/* Track */
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 4px;                 /* thinner than music bar */
+    background: #535353;         /* gray track */
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+    background: transition 0.2s ease;
+}
+
+/* Green fill effect on hover/drag */
+.slider:hover {
+    background: linear-gradient(
+        to right,
+        #1db954 0%,
+        #1db954 var(--value, 50%),
+        #535353 var(--value, 50%),
+        #535353 100%
+    );
+}
+
+/* ===== WEBKIT THUMB ===== */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ffffff;
+    opacity: 0;                       /* hidden by default */
+    transition: opacity .15s ease, transform .15s ease;
+}
+
+/* Show thumb on hover */
+.slider:hover::-webkit-slider-thumb {
+    opacity: 1;
+}
+
+/* Slight grow while dragging */
+.slider::-webkit-slider-thumb:active {
+    transform: scale(1.2);
+}
+
+/* ===== FIREFOX ===== */
+.slider::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: none;
+    opacity: 0;
+    transition: opacity .15s ease, transform .15s ease;
+}
+
+.slider:hover::-moz-range-thumb {
+    opacity: 1;
+}
+
+.slider::-moz-range-thumb:active {
+    transform: scale(1.2);
+}
