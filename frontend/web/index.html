@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <main>
         <header>
-            <p>hej</p>
+            <div class="topNavigation">
+                <a class="homeButton" href="#home">Home</a>
+                <input type="text" placeholder="Search..">
+            </div>
+            <div class="profileNavigation">
+                <button class="profileButton">
+                    <img src="../../img/torpfp.webp" alt="Profile">
+                </button>
+            </div>
+            
         </header>
         
         <article>
@@ -25,7 +34,10 @@
         </article>
 
         <footer>
-
+            <!--Slider-->
+            <div>
+                <input type="range" min="1" max="100" value="50" class="slider" id="soundValueRange">
+            </div>
         </footer>
     </main>
 </body>

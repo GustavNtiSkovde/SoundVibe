@@ -31,7 +31,8 @@ SoundVibe/
 │   │   │   └── style.css
 │   │   ├── js/
 │   │   │   ├── app.js
-│   │   │   └── api.js
+│   │   │   ├── api.js
+|   |   |   └── web.js
 │   │   └── assets/
 │   │
 │   └── desktop/                (C# WPF/MAUI)
