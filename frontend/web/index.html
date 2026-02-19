@@ -35,8 +35,15 @@
         </article>
 
         <footer>
-            <!--Slider-->
-            <div class="slideContainer">
+            <!--Song length slider-->
+            <div class="musicSlideContainer">
+                <span id="songCurrentTime">0:00</span>
+                <input type="range" min="0" value="0" step="1" class="slider" id="musicSliderRange">
+                <span id="songDurationTime">3:45</span>
+            </div>
+
+            <!--Volume slider-->
+            <div class="volumeSlideContainer">
                 <input type="range" min="1" max="100" value="50" class="slider" id="soundValueRange">
                 <p id="volumeShow"></p>
             </div>

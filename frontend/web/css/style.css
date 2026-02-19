@@ -61,22 +61,27 @@ header {
 
 footer {
     grid-column: 1 / span 3; 
-    grid-row: 3; 
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
 }
 
-.slideContainer {
-    width: 120px;
+.volumeSlideContainer {
+    grid-column: 3;
+    justify-self: center; 
+    align-self: center;
     display: flex;
     align-items: center;
+    gap: 10px;
+    width: 160px;
 }
 
-/* Track */
 .slider {
     -webkit-appearance: none;
     appearance: none;
     width: 100%;
-    height: 4px;                 /* thinner than music bar */
-    background: #535353;         /* gray track */
+    height: 4px;
+    background: #efeeee ;
     border-radius: 2px;
     outline: none;
     cursor: pointer;
@@ -88,8 +93,7 @@ footer {
     background: linear-gradient(
         to right,
         #1db954 0%,
-        #1db954 var(--value, 50%),
-        #535353 var(--value, 50%),
+        #efeeee var(--value, 50%),
         #535353 100%
     );
 }
@@ -102,16 +106,14 @@ footer {
     height: 10px;
     border-radius: 50%;
     background: #ffffff;
-    opacity: 0;                       /* hidden by default */
+    opacity: 0;
     transition: opacity .15s ease, transform .15s ease;
 }
 
-/* Show thumb on hover */
 .slider:hover::-webkit-slider-thumb {
     opacity: 1;
 }
 
-/* Slight grow while dragging */
 .slider::-webkit-slider-thumb:active {
     transform: scale(1.2);
 }
@@ -133,4 +135,10 @@ footer {
 
 .slider::-moz-range-thumb:active {
     transform: scale(1.2);
+}
+
+#volumeShow {
+    color: white;
+    font-size: 14px;
+    min-width: 30px;
 }

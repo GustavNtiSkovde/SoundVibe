@@ -1,19 +1,47 @@
-// Value change volume slider
-let volumeSlider = document.getElementById("soundValueRange");
-let volumeOutput = document.getElementById("volumeShow");
-volumeOutput.innerHTML = volumeSlider.value;
+//=================
+// Variabler
+//=================
+    // Song Varibales
+    const musicSlider = document.getElementById
+    ("musicSliderRange");
+    const songCurrentDuration = document.getElementById("songCurrentTime");
+    const currentAudio = new Audio('audio.mp3');
 
-//Volume value show
-volumeSlider.oninput = function() {
-    volumeOutput.innerHTML = this.value;
-}
+    // Value change volume slider
+    let volumeSlider = document.getElementById("soundValueRange");
+    let volumeOutput = document.getElementById("volumeShow");
+    volumeOutput.innerHTML = volumeSlider.value;
 
-// Volume green update
-function updateVolumeFill() {
-    const value = (volumeSlider.value - volumeSlider.min) / (volumeSlider.max - volumeSlider.min) * 100;
+//================
+// Functions
+//================
+    //==================
+    // Volume functions
+    //==================
+        // Volume value show
+        volumeSlider.oninput = function() {
+            volumeOutput.innerHTML = this.value;
+        }
 
-    volumeSlider.style.setProperty("--value", value + "%");
-}
+        // Volume slider update
+        function updateVolumeFill() {
+            const value = (volumeSlider.value - volumeSlider.min) / (volumeSlider.max - volumeSlider.min) * 100;
 
+            volumeSlider.style.setProperty("--value", value + "%");
+        }
+    
+    //============================
+    // Volume Duration functions
+    //============================
+        // Uppdatera songDurrationTime when loading new song
+
+        // Song Durration slider update
+
+        // Jump in song whith slider
+
+
+//===============
+// Calls
+//===============
 volumeSlider.addEventListener("input", updateVolumeFill);
 updateVolumeFill();
